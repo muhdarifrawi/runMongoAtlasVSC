@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Add Data</h1>
+<div class="form-group">
+<form method="POST">
+    <p><input type="text" class="form-control" placeholder="Insert name here" name="insert_name"></input></p>
+    <p><input type="text" class="form-control" placeholder="Contact Number" name="insert_contact"></input></p>
+    <p><textarea type="textarea" class="form-control" placeholder="address" name="insert_address"></textarea></p>
+    <input type="Submit" class="form-control" value="Submit"></input>
+</form>
+</div>
+
+{% endblock %}

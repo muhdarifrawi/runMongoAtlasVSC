@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Update Data</h1>
+<div class="form-group">
+
+<form method="POST">
+    <p><input type="text" class="form-control" placeholder="Insert name here" name="insert_name" value="{{search.name}}"></input></p>
+    <p><input type="text" class="form-control" placeholder="Contact Number" name="insert_contact" value="{{search.contact}}"></input></p>
+    <p><textarea type="textarea" class="form-control" placeholder="address" name="insert_address">{{search.address}}</textarea></p>
+    <input type="Submit" class="form-control" value="Submit"></input>
+    <a class="btn btn-light mt-3" href="{{url_for('index')}}">Cancel</a>
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Search</h1>
+<form method="POST">
+    <label>Search By:</label>
+    <select class="form-control" id="search-bar" name="search-bar">
+        <option value="name">Name</option>
+        <option value="contact">Contact</option>
+        <option value="address">Address</option>
+    </select>
+    <p><input type="text" class="form-control mt-3" placeholder="Input keyword" name="search-value"></input></p>
+    <input type="submit" class="form-control" value="search"></input>
+</form>
+
+
+{% for each in search_name %}
+<div class="card m-3" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{each.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{each.contact}}</h6>
+        <p class="card-text">{{each.address}}</p>
+        <a href="{{url_for('edit',current_id=each['_id'])}}" class="card-link">Edit</a>
+        <a href="{{url_for('delete',current_id=each['_id'])}}" class="card-link">Delete</a>
+    </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

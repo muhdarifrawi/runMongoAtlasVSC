@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Delete Data</h1>
+<div class="form-group">
+
+<form method="POST">
+    <p>{{search.name}}</p>
+    <p>{{search.contact}}</p>
+    <p>{{search.address}}</p>
+    <input type="Submit" class="form-control" value="Submit"></input>
+    <a class="btn btn-light mt-3" href="{{url_for('index')}}">Cancel</a>
+</form>
+
+</div>
+
+{% endblock %}
